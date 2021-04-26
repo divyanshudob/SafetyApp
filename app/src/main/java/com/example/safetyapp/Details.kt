@@ -11,6 +11,7 @@ class Details: AppCompatActivity(){
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.details)
         //your hero
+        //new code
 
     }
 
