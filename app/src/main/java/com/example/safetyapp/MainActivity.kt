@@ -6,6 +6,9 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
+import com.example.safetyapp.Details
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,15 +39,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val button2 = findViewById<Button>(R.id.button2)
         val defence = findViewById<Button>(R.id.Defence)
+        val alert = findViewById<Button>(R.id.alert)
 
         button2.setOnClickListener{
-            val intent = Intent(this,Details::class.java)
-            startActivity(intent)
+
+            val myIntent = Intent(this, Details::class.java)
+            startActivity(myIntent)
         }
 
         defence.setOnClickListener{
-            val intent = Intent(this, Defence_tips::class.java)
-            startActivity(intent)
+
+            val myIntent = Intent(this, defence_tips::class.java)
+            startActivity(myIntent)
+        }
+
+        alert.setOnClickListener{
+
+            val myIntent = Intent(this, alert_page::class.java)
+            startActivity(myIntent)
         }
 
         init()
