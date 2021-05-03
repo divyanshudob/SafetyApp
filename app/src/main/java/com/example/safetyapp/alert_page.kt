@@ -9,6 +9,7 @@ import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.SmsManager
+import android.view.Gravity
 import android.widget.Toast
 import java.lang.Math.sqrt
 import java.util.*
@@ -42,6 +43,11 @@ class alert_page : AppCompatActivity() {
 
                 val myIntent = Intent(this@alert_page,MapsActivity::class.java)
                 startActivity(myIntent)
+                Toast.makeText(applicationContext,"SMS SENT",Toast.LENGTH_SHORT).show()
+
+            }
+            else{
+                val myIntent = Intent(this@alert_page,defence_tips::class.java)
             }
         }
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
