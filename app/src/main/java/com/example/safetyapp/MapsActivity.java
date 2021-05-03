@@ -84,8 +84,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     SmsManager smsManager = SmsManager.getDefault();
                     StringBuffer message = new StringBuffer();
 
-                    message.append("I am in danger. My current location is ");
-                    message.append("http://maps.google.com?q=");
+                    message.append("I am in danger. My current location is");
+                    message.append("\n");
+                    message.append("http://maps.google.com/maps?q=");
                     message.append(location.getLatitude());
                     message.append(",");
                     message.append(location.getLongitude());

@@ -39,7 +39,7 @@ class alert_page : AppCompatActivity() {
             currentAcceleration = kotlin.math.sqrt((x * x + y * y + z * z).toDouble()).toFloat()
             val delta: Float = currentAcceleration - lastAcceleration
             acceleration = acceleration * 0.9f + delta
-            if (acceleration > 5) {
+            if (acceleration > 10) {
 
                 val myIntent = Intent(this@alert_page,MapsActivity::class.java)
                 startActivity(myIntent)
