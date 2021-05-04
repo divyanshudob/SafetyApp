@@ -6,10 +6,12 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.SmsManager
 import android.view.Gravity
+import android.widget.Button
 import android.widget.Toast
 import java.lang.Math.sqrt
 import java.util.*
@@ -19,6 +21,9 @@ class alert_page : AppCompatActivity() {
     private var acceleration = 0f
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
+   // val police = findViewById<Button>(R.id.police)
+   // val helpline = findViewById<Button>(R.id.helpline)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alert_page)
@@ -28,6 +33,24 @@ class alert_page : AppCompatActivity() {
         acceleration = 10f
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
+
+        /*police.setOnClickListener{
+
+            val mobile = "100"
+            val i = Intent()
+            i.action =Intent.ACTION_DIAL
+            i.data = Uri.parse("tel:$mobile")
+            startActivity(i)
+        }
+
+        helpline.setOnClickListener{
+            val mobile = "1096"
+            val i = Intent()
+            i.action =Intent.ACTION_DIAL
+            i.data = Uri.parse("tel:$mobile")
+            startActivity(i)
+
+        }*/
 
     }
     private val sensorListener: SensorEventListener = object : SensorEventListener {

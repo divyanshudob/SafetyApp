@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                     startActivityForResult(AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(providers)
+                        .setLogo(R.drawable.staysafe_logo)
                         .build(),AUTH_REQUEST_CODE)
                 }
             }
