@@ -30,7 +30,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationManager locationManager;
     private LocationListener locationListener;
 
-    private final long MIN_TIME = 500000;
+    private final long MIN_TIME = 300000;
     private final long MIN_DIST = 100;
 
     private LatLng latLng;
@@ -78,7 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     latLng = new LatLng(location.getLatitude(),location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(latLng).title("My current location"));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                    String phoneNumber = "+919436740060";
+                    String phoneNumber = "+919111111111";
                     String myLatitude =  String.valueOf(location.getLatitude());
                     String myLongitude = String.valueOf(location.getLongitude());
                     SmsManager smsManager = SmsManager.getDefault();

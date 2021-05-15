@@ -21,8 +21,7 @@ class alert_page : AppCompatActivity() {
     private var acceleration = 0f
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
-   // val police = findViewById<Button>(R.id.police)
-   // val helpline = findViewById<Button>(R.id.helpline)
+   
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,23 +33,6 @@ class alert_page : AppCompatActivity() {
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
 
-        /*police.setOnClickListener{
-
-            val mobile = "100"
-            val i = Intent()
-            i.action =Intent.ACTION_DIAL
-            i.data = Uri.parse("tel:$mobile")
-            startActivity(i)
-        }
-
-        helpline.setOnClickListener{
-            val mobile = "1096"
-            val i = Intent()
-            i.action =Intent.ACTION_DIAL
-            i.data = Uri.parse("tel:$mobile")
-            startActivity(i)
-
-        }*/
 
     }
     private val sensorListener: SensorEventListener = object : SensorEventListener {
